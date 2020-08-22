@@ -3,7 +3,7 @@ version: '3'
 services:
  
     php:
-        env_file: .env 
+        #env_file: .env 
         build:
             context: php
         ports:
@@ -17,7 +17,7 @@ services:
  
     nginx:
         image: nginx:latest
-        env_file: .env
+        #env_file: .env
         ports:
             - 8060:80
         volumes:
@@ -27,7 +27,7 @@ services:
             - php
  
     mysql:
-        env_file: .env
+        #env_file: .env
         image: mysql:5.7
         ports:
             - 3306:3306
